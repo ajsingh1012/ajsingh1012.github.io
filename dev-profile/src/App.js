@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 function App() {
   $.ajax({
-    url: "https://api.github.com/users/blackmiaool/repos",
+    url: "https://api.github.com/users/ajsingh1012/repos",
     jsonp: true,
     method: "GET",
     dataType: "json",
