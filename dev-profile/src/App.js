@@ -10,6 +10,7 @@ function App() {
     dataType: "json",
     success: function(res) {
       console.log(res);
+      window.ghmnp = res;
       /*res.array.forEach(element => {
         console.log(element);
         if(element.has_pages) {
