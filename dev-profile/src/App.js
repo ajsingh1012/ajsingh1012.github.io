@@ -11,6 +11,7 @@ function App() {
     success: function(res) {
       console.log(res);
       res.array.forEach(element => {
+        console.log(element);
         if(element.has_pages) {
           console.log(document.URL + element.name);
         }
