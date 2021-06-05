@@ -13,7 +13,9 @@ function App() {
       window.ghmnp = res;
 
       res.forEach((element) => {
-        console.log(document.URL + res.name);
+        if(element.has_pages) {
+          console.log(document.URL + element.name);
+        }
       })
 
       /*res.array.forEach(element => {
