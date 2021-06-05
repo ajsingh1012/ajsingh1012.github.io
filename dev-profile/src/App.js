@@ -11,6 +11,11 @@ function App() {
     success: function(res) {
       console.log(res);
       window.ghmnp = res;
+
+      res.forEach((element) => {
+        console.log(document.URL + res.name);
+      })
+
       /*res.array.forEach(element => {
         console.log(element);
         if(element.has_pages) {
