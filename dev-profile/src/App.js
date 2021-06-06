@@ -9,9 +9,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Typography variant="h2" component="h2" gutterBottom>Welcome</Typography>
-        <CardGrid />      
+        <Typography variant="p" component="p" gutterBottom>
+          This is the official front cover portfolio for the GitHub repositories of Aneeljyot Alagh.
+        </Typography>
+        <CardGrid />
       </header>
-      
     </div>
   );
 }
