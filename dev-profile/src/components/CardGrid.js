@@ -47,15 +47,17 @@ function getInfo() {
         method: "GET",
         dataType: "json",
         success: function(res) {
-            res.forEach((element) => {        
-                if(element.has_pages) {  
-                    var entry;        
-                    name = element.name;
-                    content = element.description;
-                    url = document.URL + element.name;
-                    entry = {name: name, desc: content, link: url};
-                    arr.push(entry);
-                }
+            res.forEach((element) => {
+              var entry;
+              name = element.name;
+              content = element.description;
+              if(element.has_pages) {  
+                  url = document.URL + element.name;
+              } else {
+                url = 'https://github.com/ajsingh1012/' + element.name;
+              }
+              entry = {name: name, desc: content, link: url};
+              arr.push(entry);
             });
         }
     });
