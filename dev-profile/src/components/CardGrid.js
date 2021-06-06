@@ -47,7 +47,6 @@ function getInfo() {
         method: "GET",
         dataType: "json",
         success: function(res) {
-            console.log(res);
             res.forEach((element) => {        
                 if(element.has_pages) {  
                     var entry;        
