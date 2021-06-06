@@ -1,48 +1,17 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import $ from 'jquery';
+import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import CardGrid from './components/CardGrid';
 
 function App() {
-  $.ajax({
-    url: "https://api.github.com/users/ajsingh1012/repos",
-    jsonp: true,
-    method: "GET",
-    dataType: "json",
-    success: function(res) {
-      console.log(res);
-      window.ghmnp = res;
-
-      res.forEach((element) => {
-        if(element.has_pages) {
-          console.log(document.URL + element.name);
-        }
-      })
-
-      /*res.array.forEach(element => {
-        console.log(element);
-        if(element.has_pages) {
-          console.log(document.URL + element.name);
-        }
-      });*/
-    }
-  });
-
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Typography variant="h2" component="h2" gutterBottom>Welcome</Typography>
+        <CardGrid />      
       </header>
+      
     </div>
   );
 }
